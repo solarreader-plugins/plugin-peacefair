@@ -1,0 +1,66 @@
+[
+  {
+    "columns": [
+      {
+        "columnName": "High_Voltage_Fehler",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Low_Voltage_Fehler",
+        "columnType": "NUMBER"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "pf_highvoltagealarmstatus"
+          },
+          {
+            "expression": "pf_lowvoltagealarmstatus"
+          }
+        ]
+      }
+    ],
+    "tableName": "Service"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Spannung",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Strom",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Power",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Energie",
+        "columnType": "NUMBER"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "pf_voltage"
+          },
+          {
+            "expression": "pf_current"
+          },
+          {
+            "expression": "pf_power"
+          },
+          {
+            "expression": "pf_energy"
+          }
+        ]
+      }
+    ],
+    "tableName": "Batterie"
+  }
+]

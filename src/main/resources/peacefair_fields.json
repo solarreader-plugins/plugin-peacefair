@@ -1,0 +1,65 @@
+[
+  {
+    "registerType": "INPUT_REGISTER",
+    "offset": 0,
+    "registerLength": 8,
+    "propertyFieldList": [
+      {
+        "fieldName": "pf_voltage",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.01",
+        "offset": 0,
+        "length": 2,
+        "note": "0.01V",
+        "unit": "V"
+      },
+      {
+        "fieldName": "pf_current",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value * 0.01",
+        "offset": 2,
+        "length": 2,
+        "note": "0.01A",
+        "unit": "A"
+      },
+      {
+        "fieldName": "pf_power",
+        "fieldType": "U32_BIG_ENDIAN_LOW_HIGH",
+        "expression": "value * 0.1",
+        "offset": 4,
+        "length": 4,
+        "note": "0.1W",
+        "unit": "W"
+      },
+      {
+        "fieldName": "pf_energy",
+        "fieldType": "U32_BIG_ENDIAN_LOW_HIGH",
+        "expression": "value",
+        "offset": 8,
+        "length": 4,
+        "note": "1Wh",
+        "unit": "Wh"
+      },
+      {
+        "fieldName": "pf_highvoltagealarmstatus",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "offset": 12,
+        "length": 2,
+        "note": "0xFFFF is alarm, 0x0000 is not alarm",
+        "unit": ""
+      },
+      {
+        "fieldName": "pf_lowvoltagealarmstatus",
+        "fieldType": "U16_BIG_ENDIAN",
+        "expression": "value",
+        "offset": 14,
+        "length": 2,
+        "note": "0xFFFF is alarm, 0x0000 is not alarm",
+        "unit": ""
+      }
+    ],
+    "name": "Input Register Block 1",
+    "providerPropertyType": "MODBUS"
+  }
+]
