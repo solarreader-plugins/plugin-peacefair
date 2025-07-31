@@ -29,15 +29,12 @@ import de.schnippsche.solarreader.backend.connection.modbus.ModbusConnection;
 import de.schnippsche.solarreader.backend.connection.modbus.ModbusConnectionFactory;
 import de.schnippsche.solarreader.backend.connection.modbus.ModbusRegisterType;
 import de.schnippsche.solarreader.backend.connection.usb.SerialUsbConnection;
-import de.schnippsche.solarreader.backend.protocol.KnownProtocol;
 import de.schnippsche.solarreader.backend.provider.AbstractModbusProvider;
 import de.schnippsche.solarreader.backend.provider.ProviderProperty;
-import de.schnippsche.solarreader.backend.provider.SupportedInterface;
 import de.schnippsche.solarreader.backend.table.Table;
 import de.schnippsche.solarreader.backend.util.*;
 import de.schnippsche.solarreader.database.Activity;
 import de.schnippsche.solarreader.frontend.ui.*;
-import de.schnippsche.solarreader.plugin.PluginMetadata;
 import java.io.IOException;
 import java.net.ConnectException;
 import java.util.*;
@@ -49,15 +46,6 @@ import org.tinylog.Logger;
  * extends {@link AbstractModbusProvider} and provides functionality for interacting with Peacefair
  * energy meter using the Modbus protocol.
  */
-@PluginMetadata(
-    name = "Peacefair",
-    version = "1.0.1",
-    author = "Stefan Töngi",
-    url = "https://github.com/solarreader-plugins/plugin-Peacefair",
-    svgImage = "peacefair.svg",
-    supportedInterfaces = {SupportedInterface.NAMED_USB, SupportedInterface.LISTED_USB},
-    usedProtocol = KnownProtocol.MODBUS,
-    supports = "Peacefair PZEM 003, PZEM 017")
 public class Peacefair extends AbstractModbusProvider {
 
   private static final int RETRY_COUNT = 3;
